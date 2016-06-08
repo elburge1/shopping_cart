@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="cartApp">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <base href='/' />
+  </head>
+  <body>
+    <h1>Welcome to Tea-Pain!</h1>
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <ul class="nav navbar-nav">
+          <li>
+            <a href="/">Home</a>
+          </li>
+          <li>
+            <a href="/">About</a>
+          </li>
+          <li>
+            <a href="/">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div ng-view>
+    </div>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular.js" charset="utf-8"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular-route.js" charset="utf-8"></script>
+    <script src="./app/app.js" charset="utf-8"></script>
+    <script src="./app/tea/tea.services.js" charset="utf-8"></script>
+    <script src="./app/tea/tea.controllers.js" charset="utf-8"></script>
+  </body>
+</html>

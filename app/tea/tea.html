@@ -1,0 +1,29 @@
+<h2>{{Shopper.title}}</h2>
+<div class="container-fluid">
+  <span class="pull-right">
+    <h4>Cart!</h4>
+    <ul>
+      <li ng-repeat="tea in Shopper.cart track by tea.name">
+        {{tea.name}}: {{tea.price/100 | currency}}
+      </li>
+    </ul>
+  </span>
+  <div ng-repeat="tea in Shopper.teaPlethora">
+    <img ng-src="{{tea.imageUrl}}" alt="tea image" />
+    <p>
+      {{tea.name}}
+    </p>
+    <span>Price: {{tea.price/100 | currency}}</span>
+    <p>
+      {{tea.ingredients}}
+    </p>
+    <ul>
+      <li ng-repeat="category in tea.categories">
+        {{category}}
+      </li>
+    </ul>
+    <a class="btn btn-info" ng-click="Shopper.putInCart(tea)">
+      Add to cart!
+    </a>
+  </div>
+</div>
